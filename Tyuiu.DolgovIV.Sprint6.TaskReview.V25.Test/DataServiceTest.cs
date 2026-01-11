@@ -19,10 +19,10 @@ namespace Tyuiu.DolgovIV.Sprint6.TaskReview.V25.Test
 
             int k = 0;
             int l = 1;
-            int R = 3;
+            int R = 2;
 
             int res = ds.result(ds.GetMatrix(array, n1, n2, X), R, k, l);
-            int wait = 3;
+            int wait = 6;
             Assert.AreEqual(res, wait);
         }
     }

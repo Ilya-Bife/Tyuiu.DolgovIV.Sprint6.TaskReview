@@ -9,15 +9,12 @@
 
             Random rn = new Random();
 
-            int cnt = 0;
-
-            int res = 1;
 
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    if (cnt % 2 == 1)
+                    if (i % 2 != 0)
                     {
                         array[i, j] = x;
                     }
@@ -25,7 +22,6 @@
                     {
                         array[i, j] = rn.Next(n1, n2);
                     }
-                    cnt++;
                 }
             }
 
@@ -37,9 +33,9 @@
             int res = 0;
             for (int j = k; j <= l; j++)
             {
-                if (array[R, j] % 2 != 0)
+                if (array[R-1, j] % 2 != 0)
                 {
-                    res += array[R, j];
+                    res += array[R-1, j];
                 }
             }
 
